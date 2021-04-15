@@ -1,0 +1,30 @@
+{
+  "name": "vite2-vue2-electron",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "node ./scripts/project.js dev",
+    "build": "node ./scripts/project.js build",
+    "serve": "vite preview",
+    "vite_dev": "vite",
+    "vite_build": "vite build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vite-plugin-vue2": "^1.4.3",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.2",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vite": "^2.1.5",
+    "electron": "^11.2.3",
+    "chalk": "^4.1.0",
+    "esbuild": "^0.8.34",
+    "electron-builder": "^22.9.1",
+    "chokidar": "^3.5.1"
+  }
+}
