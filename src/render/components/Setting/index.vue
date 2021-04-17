@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import UpdateBox from "./update";
+import UpdateBox from "./update.vue";
 export default {
     components: {
         UpdateBox,
@@ -96,7 +96,7 @@ export default {
         height: 600px;
         background: #fff;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .5s);
+        /* box-shadow: 0 0 10px rgba($color: #000000, $alpha: .5s); */
         display: flex;
 
         .setting-box-title {

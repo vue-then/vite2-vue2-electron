@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.js';
 import Vuex from 'vuex'
 import app from './modules/app'
 import user from './modules/user'

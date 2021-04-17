@@ -83,6 +83,7 @@ function createWindow() {
     height: 700,
 		useContentSize: true,
 		webPreferences: {
+      enableRemoteModule: true,
 			nodeIntegration: true, // 添加这一配置
 		},
     devTools: false,

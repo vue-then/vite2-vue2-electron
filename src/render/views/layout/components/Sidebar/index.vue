@@ -54,14 +54,14 @@
 import {
     mapGetters
 } from "vuex";
-import SidebarItem from "./SidebarItem";
-import ScrollBar from "@/components/ScrollBar";
+import SidebarItem from "./SidebarItem.vue";
+import ScrollBar from "@/components/ScrollBar/index.vue";
 
-import SessionList from "./SessionList";
-import Friends from "./Friends";
-import InfoBox from "./InfoBox";
-import UpdateInfo from "@/components/UpdateInfo";
-import SettingBox from "@/components/Setting";
+import SessionList from "./SessionList.vue";
+import Friends from "./Friends.vue";
+import InfoBox from "./InfoBox.vue";
+import UpdateInfo from "@/components/UpdateInfo/index.vue";
+import SettingBox from "@/components/Setting/index.vue";
 
 export default {
     components: {

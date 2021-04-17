@@ -1,8 +1,10 @@
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
+
+import Layout from '../views/layout/Layout.vue'
 
 export const constantRouterMap = [
     { path: '/login', name: "login", component: () => import('../views/auth/Login.vue'), hidden: true },

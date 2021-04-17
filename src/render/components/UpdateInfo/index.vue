@@ -33,7 +33,7 @@
                 <span>名片</span>
             </div>
             <div class="update-item-cent" @click="isShowQRCode = true">
-                <img src="@/assets/qr-code.png" alt="" srcset="">
+                <!-- <img src="@/assets/qr-code.png" alt="" srcset=""> -->
             </div>
         </div>
         <div class="update-cent-item">

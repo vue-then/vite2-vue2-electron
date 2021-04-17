@@ -294,9 +294,9 @@ export default {
     opacity: 0.4;
 }
 
-/deep/ .el-form-item__content .el-button {
+/* /deep/ .el-form-item__content .el-button {
     background-color: #1ab2ff;
     border-color: #1ab2ff;
     box-shadow: 0px 3px 12px 0px rgba(26, 178, 255, 0.3);
-}
+} */
 </style>
