@@ -17,8 +17,7 @@ export default defineConfig({
 		// '/foo': 'http://localhost:4567/foo',
 		// with options
 		'/api': {
-			target: 'http://thenewxt.com', // test 
-			//target: 'http://192.168.8.32:8888', // jack local
+			//target: 'http://192.168.8.32:8888',
 			changeOrigin: true,
 			// rewrite: path => path.replace(/^\/api/, '')
 		}
