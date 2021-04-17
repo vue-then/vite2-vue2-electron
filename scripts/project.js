@@ -205,10 +205,51 @@ var Build = class extends Base {
     await import_electron_builder.build({
       projectDir: this.outDir,
       config: {
+        productName: "MyApp",
         directories: {
-          output: import_path2.join(this.root, "release")
+          output: import_path2.join(this.root, "release"),
         },
-        extends: null,
+        asar: false,
+        // extends: null,
+        // files: [
+        //   "dist/electron/**/*"
+        // ],
+        extraResources: [
+          {
+            from: "src/settings",
+            to: "app/settings"
+          }
+        ],
+        dmg: {
+          contents: [
+            {
+              x: 410,
+              y: 150,
+              type: "link",
+              path: "/Applications"
+            },
+            {
+              x: 130,
+              y: 150,
+              type: "file"
+            }
+          ]
+        },
+        mac: {
+          icon: import_path2.join(this.root, "scripts", "/icons/icon.icns"),
+          artifactName: "${productName}_setup_${version}.${ext}",
+          target: [
+            "dmg",
+            "zip"
+          ]
+        },
+        win: {
+          icon: "./icons/icon.ico"
+          
+        },
+        linux: {
+          icon: "./icons"
+        },
         electronDownload: {
           mirror: MIRROR
         }
