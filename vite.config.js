@@ -9,16 +9,31 @@ const customResolver = resolve({
 });
 const projectRootDir = path.resolve(__dirname);
 export default defineConfig({
-  server: {
-    port: 3100,
-  },
-  plugins: [
+	server: {
+		port: 3100,
+	},
+	proxy: {
+		// string shorthand
+		// '/foo': 'http://localhost:4567/foo',
+		// with options
+		'/api': {
+			target: 'http://thenewxt.com', // test 
+			//target: 'http://192.168.8.32:8888', // jack local
+			changeOrigin: true,
+			// rewrite: path => path.replace(/^\/api/, '')
+		}
+	},
+	plugins: [
 		createVuePlugin(),
 		alias({
-			entries: [
-				{
+			entries: [{
 					find: "@",
 					replacement: path.resolve(projectRootDir, "src/render"),
+					// OR place `customResolver` here. See explanation below.
+				},
+				{
+					find: "tool",
+					replacement: path.resolve(projectRootDir, "src/tool"),
 					// OR place `customResolver` here. See explanation below.
 				},
 			],
